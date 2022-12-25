@@ -2301,8 +2301,6 @@ if IKAI then
 	local Frametime = Instance.new("Frame")
 	local UICorner213 = Instance.new("UICorner")
 	local UICorner214 = Instance.new("UICorner")
-	local TextLabelfps = Instance.new("TextLabel")
-	local TextLabeltime = Instance.new("TextLabel")
 	local ImageLabelfps = Instance.new("ImageLabel")
 	local ImageLabeltime = Instance.new("ImageLabel")
 	local Strokefps = Instance.new("UIStroke")
@@ -2352,50 +2350,11 @@ if IKAI then
 	Stroketime.Color = _G.Color
 	Stroketime.Transparency = 0
 	
-	TextLabelfps.Name = "TextLabelfps"
-	TextLabelfps.Parent = Framefps
-	TextLabelfps.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabelfps.BackgroundTransparency = 1.000
-	TextLabelfps.Position = UDim2.new(0.356857866, 0, 0.234848887, 0)
-	TextLabelfps.Size = UDim2.new(0, 124, 0, 23)
-	TextLabelfps.Font = Enum.Font.GothamSemibold
-	TextLabelfps.Text = "FPS:N/A"
-	TextLabelfps.TextColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabelfps.TextSize = 14.000
-	TextLabelfps.TextXAlignment = Enum.TextXAlignment.Left
+
 	
-	TextLabeltime.Name = "TextLabeltime"
-	TextLabeltime.Parent = Frametime
-	TextLabeltime.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabeltime.BackgroundTransparency = 1.000
-	TextLabeltime.Position = UDim2.new(0.356857866, 0, 0.234848887, 0)
-	TextLabeltime.Size = UDim2.new(0, -35, 0, 23)
-	TextLabeltime.Font = Enum.Font.GothamSemibold
-	TextLabeltime.Text = "FPS:N/A"
-	TextLabeltime.TextColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabeltime.TextSize = 14.000
-	TextLabeltime.TextXAlignment = Enum.TextXAlignment.Left
+
 	
-	spawn(function()
-		while wait() do
-			pcall(function()
-				local scripttime=game.Workspace.DistributedGameTime
-				local seconds = scripttime%60
-				local minutes = math.floor(scripttime/60%60)
-				local hours = math.floor(scripttime/3600)
-				local tempo = string.format("%.0f Hour , %.0f Minute , %.0f Second", hours ,minutes, seconds)
-				TextLabeltime.Text = tempo
-			end)
-		end
-	end)
-	
-	spawn(function()
-		while wait() do
-			pcall(function()
-				TextLabelfps.Text = "FPS:"..string.format("%d",workspace:GetRealPhysicsFPS())
-			end)
-		end
-	end)
+
 	
 	ImageLabelfps.Name = "ImageLabelfps"
 	ImageLabelfps.Parent = Framefps
@@ -2426,11 +2385,6 @@ if IKAI then
 			{Transparency = 1}
 		):Play()
 		TweenService:Create(
-			TextLabelfps,
-			TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-			{TextTransparency = 1}
-		):Play()
-		TweenService:Create(
 			ImageLabelfps,
 			TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
 			{ImageTransparency = 1}
@@ -2447,11 +2401,7 @@ if IKAI then
 			TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
 			{Transparency = 0}
 		):Play()
-		TweenService:Create(
-			TextLabelfps,
-			TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-			{TextTransparency = 0}
-		):Play()
+
 		TweenService:Create(
 			ImageLabelfps,
 			TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -2471,11 +2421,6 @@ if IKAI then
 			{Transparency = 1}
 		):Play()
 		TweenService:Create(
-			TextLabeltime,
-			TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-			{TextTransparency = 1}
-		):Play()
-		TweenService:Create(
 			ImageLabeltime,
 			TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
 			{ImageTransparency = 1}
@@ -2492,11 +2437,7 @@ if IKAI then
 			TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
 			{Transparency = 0}
 		):Play()
-		TweenService:Create(
-			TextLabeltime,
-			TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-			{TextTransparency = 0}
-		):Play()
+
 		TweenService:Create(
 			ImageLabeltime,
 			TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -2519,11 +2460,7 @@ if IKAI then
 			TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
 			{Transparency = 1}
 		):Play()
-		TweenService:Create(
-			TextLabelfps,
-			TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-			{TextTransparency = 1}
-		):Play()
+
 		TweenService:Create(
 			ImageLabelfps,
 			TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -2549,11 +2486,6 @@ if IKAI then
 						Strokefps,
 						TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
 						{Transparency = 0}
-					):Play()
-					TweenService:Create(
-						TextLabelfps,
-						TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-						{TextTransparency = 0}
 					):Play()
 					TweenService:Create(
 						ImageLabelfps,
@@ -2586,11 +2518,6 @@ if IKAI then
 						{Transparency = 1}
 					):Play()
 					TweenService:Create(
-						TextLabelfps,
-						TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-						{TextTransparency = 1}
-					):Play()
-					TweenService:Create(
 						ImageLabelfps,
 						TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
 						{ImageTransparency = 1}
@@ -2616,11 +2543,7 @@ if IKAI then
 			TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
 			{Transparency = 1}
 		):Play()
-		TweenService:Create(
-			TextLabeltime,
-			TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-			{TextTransparency = 1}
-		):Play()
+
 		TweenService:Create(
 			ImageLabeltime,
 			TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -2647,11 +2570,7 @@ if IKAI then
 						TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
 						{Transparency = 0}
 					):Play()
-					TweenService:Create(
-						TextLabeltime,
-						TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-						{TextTransparency = 0}
-					):Play()
+
 					TweenService:Create(
 						ImageLabeltime,
 						TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -2681,11 +2600,6 @@ if IKAI then
 						Stroketime,
 						TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
 						{Transparency = 1}
-					):Play()
-					TweenService:Create(
-						TextLabeltime,
-						TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-						{TextTransparency = 1}
 					):Play()
 					TweenService:Create(
 						ImageLabeltime,

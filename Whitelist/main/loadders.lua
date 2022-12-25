@@ -44,7 +44,7 @@ game:service'Players'.LocalPlayer.Idled:connect(function()
 end)
 
 spawn(function()
-	while wait(2) do
+	while wait(1) do
 		game:GetService'VirtualUser':CaptureController()
 	end
 end)

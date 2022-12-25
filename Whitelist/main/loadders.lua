@@ -22,7 +22,7 @@ if game:GetService("Players").LocalPlayer.PlayerGui.Main:FindFirstChild("ChooseT
     until game.Players.LocalPlayer.Team ~= nil and game:IsLoaded()
 end
 if _G.Fast_Delay == nil then
-	_G.Fast_Delay = 0
+	_G.Fast_Delay = 0.1
 end
 spawn(function()
     while true do wait()

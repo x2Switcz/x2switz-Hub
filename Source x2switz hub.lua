@@ -3967,11 +3967,11 @@ General_Tab:Dropdown("FastAttack","Super Fast",MIo,function(vu)
 	_G.Setting_table.FastAttack_Mode = vu
 	Update_Setting(getgenv()['MyName'])
 	if _G.Setting_table.FastAttack_Mode == "Fast" then
-		_G.Fast_Delay = 0.1
+		_G.Fast_Delay = 0.155
 	elseif _G.Setting_table.FastAttack_Mode == "Smooth" then
 		_G.Fast_Delay = 0.3
 	elseif _G.Setting_table.FastAttack_Mode == "Super Fast" then
-		_G.Fast_Delay = 0
+		_G.Fast_Delay = 0.147
 	end
 end)
 local Camera = require(game.ReplicatedStorage.Util.CameraShaker)

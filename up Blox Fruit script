@@ -4,7 +4,7 @@ if not game:IsLoaded() then
 end
 repeat wait(1)
     pcall(function()
-        if game:GetService("Players").LocalPlayer.PlayerGui.Main:FindFirstChild("ChooseTeam") then
+        if game:GetService("Players").LocalPlayer.PlayerGui.Main:FindFirstChild("Marines") then
             if game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Visible == true then
                 if _G.Team == "Marines" then
                     for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton.MouseButton1Click)) do

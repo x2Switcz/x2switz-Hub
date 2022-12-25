@@ -1762,8 +1762,7 @@ function CheckQuestBoss()
 				elseif Distance < 1000 then
 					Speed = 350
 				elseif Distance >= 1000 then
-					Speed = 250
-				end
+					Speed = 300
 				Tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),{CFrame = P1})
 				if _G.Stop_Tween or Auto_Raid then
 					Tween:Cancel()
@@ -1776,13 +1775,13 @@ function CheckQuestBoss()
 function TP3(P1)
 	local Distance = (P1.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
 	if Distance < 250 then
-		Speed = 10000
+		Speed = 15000
 	elseif Distance < 500 then
 		Speed = 500
 	elseif Distance < 1000 then
-		Speed = 250
+		Speed = 300
 	elseif Distance >= 1000 then
-		Speed = 250
+		Speed = 300
 	end
 	game:GetService("TweenService"):Create(
 		game.Players.LocalPlayer.Character.HumanoidRootPart,
@@ -1801,17 +1800,17 @@ end
 function TP2(P1)
 	local Distance = (P1.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
 	if Distance < 150 then
-		Speed = 5000
-	elseif Distance < 200 then
+		Speed = 1000
+	elseif Distance < 500 then
 		Speed = 1500
 	elseif Distance < 300 then
 		Speed = 800
 	elseif Distance < 500 then
 		Speed = 500
 	elseif Distance < 1000 then
-		Speed = 250
+		Speed = 300
 	elseif Distance >= 1000 then
-		Speed = 250
+		Speed = 300
 	end
 	game:GetService("TweenService"):Create(
 		game.Players.LocalPlayer.Character.HumanoidRootPart,
@@ -2269,7 +2268,7 @@ if IKAI then
 		Uitoggle.Position = UDim2.new(0.25757575, 0, 0, 0)
 		Uitoggle.Size = UDim2.new(0, 137, 0, 25)
 		Uitoggle.Font = Enum.Font.GothamSemibold
-		Uitoggle.Text = "Ui Toggle :"
+		Uitoggle.Text = "Ui Script"
 		Uitoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
 		Uitoggle.TextSize = 12.000
 		
@@ -9417,8 +9416,8 @@ function TelePQ(p)
 			_G.Stop_Tween = nil
 		else
 			_G.Stop_Tween = true
-			local Speed = 100
-			local Distance = 100
+			local Speed = 250
+			local Distance = 250
 			game:GetService("TweenService"):Create(
 				game.Players.LocalPlayer.Character.HumanoidRootPart,
 				TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),

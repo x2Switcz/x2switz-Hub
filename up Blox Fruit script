@@ -4,7 +4,7 @@ if not game:IsLoaded() then
 end
 repeat wait(1)
     pcall(function()
-        if game:GetService("Players").LocalPlayer.PlayerGui.Main:FindFirstChild("Marines") then
+        if game:GetService("Players").LocalPlayer.PlayerGui.Main:FindFirstChild("ChooseTeam") then
             if game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Visible == true then
                 if _G.Team == "Marines" then
                     for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton.MouseButton1Click)) do
@@ -6321,7 +6321,7 @@ spawn(function()
 		end)
 	end
 end)
-Quest_Tab:Toggle("Auto Phoenix Awaken","9606294253",_G.Setting_table.Auto_Phoenix_Awaken,function(vu)
+Quest_Tab:Toggle("Auto Phoenix Awaken (bug)","9606294253",_G.Setting_table.Auto_Phoenix_Awaken,function(vu)
 	Auto_Phoenix_Awaken = vu
 	Auto_Farm_Fruit = vu
 	SkillZ = vu
@@ -11039,7 +11039,7 @@ function CheckStatus()
 	Kill_Elite_Hunter_ST:Set("Kill Elite Hunter : "..tostring(game.ReplicatedStorage.Remotes.CommF_:InvokeServer("EliteHunter", "Progress")))
 	local OP = game.ReplicatedStorage.Remotes.CommF_:InvokeServer("CakePrinceSpawner")
     local Lp = tonumber(string.match(tostring(OP), "%d+"))
-	Kill_Cake_Monster_ST:Set("Kill Cake Monster : "..tostring(Lp).."500/500")
+	Kill_Cake_Monster_ST:Set("Kill Cake Monster : "..tostring(Lp).."/500")
 	if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TalkTrevor","1") == 0 then
 		Open_Don_Swan_ST:Set("✅ : Open Don Swan Quest")
 	end

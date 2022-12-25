@@ -2152,7 +2152,7 @@ if IKAI then
 		local Logo = Instance.new("ImageLabel")
 		Logo.Name = "Logo"
 		Logo.Parent = Top
-		Logo.BackgroundColor3 = Color3.fromRGB(160, 32, 240)
+		Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		Logo.BackgroundTransparency = 1.000
 		Logo.Position = UDim2.new(0, 14, 0, 2)
 		Logo.Size = UDim2.new(0, 23, 0, 23)
@@ -2161,7 +2161,7 @@ if IKAI then
 		local Name = Instance.new("TextLabel")
 		Name.Name = "Name"
 		Name.Parent = Top
-		Name.BackgroundColor3 = Color3.fromRGB(160, 32, 240)
+		Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		Name.BackgroundTransparency = 1.000
 		Name.Position = UDim2.new(0.0609756112, 5, 0, 0.5)
 		Name.Size = UDim2.new(0, 61, 0, 27)
@@ -2186,7 +2186,7 @@ if IKAI then
 		local Ver = Instance.new("TextLabel")
 		Ver.Name = "Ver"
 		Ver.Parent = Top
-		Ver.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+		Ver.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		Ver.BackgroundTransparency = 1.000
 		Ver.Position = UDim2.new(0.847561002, 0, 0, 1)
 		Ver.Size = UDim2.new(0, 47, 0, 27)
@@ -2199,7 +2199,7 @@ if IKAI then
 		local BindButton = Instance.new("TextButton")
 		BindButton.Name = "BindButton"
 		BindButton.Parent = Top
-		BindButton.BackgroundColor3 = Color3.fromRGB(160, 32, 240)
+		BindButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		BindButton.BackgroundTransparency = 1.000
 		BindButton.Position = UDim2.new(0.227561002, 0, 0, 1)
 		BindButton.Size = UDim2.new(0, 100, 0, 27)
@@ -2237,7 +2237,7 @@ if IKAI then
 		
 		ToggleFrameUi.Name = "ToggleFrameUi"
 		ToggleFrameUi.Parent = Luna
-		ToggleFrameUi.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+		ToggleFrameUi.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		ToggleFrameUi.Position = UDim2.new(0.883, -60,0.282, 0)
 		ToggleFrameUi.Size = UDim2.new(0, 198, 0, 48)
 		
@@ -2265,7 +2265,7 @@ if IKAI then
 		Uitoggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		Uitoggle.BackgroundTransparency = 1.000
 		Uitoggle.Position = UDim2.new(0.25757575, 0, 0, 0)
-		Uitoggle.Size = UDim2.new(0, 137, 0, 25)
+		Uitoggle.Size = UDim2.new(0, 255, 255, 255)
 		Uitoggle.Font = Enum.Font.GothamSemibold
 		Uitoggle.Text = "Ui Toggle :"
 		Uitoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -2317,7 +2317,7 @@ if IKAI then
 	Framefps.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 	Framefps.BorderSizePixel = 0
 	Framefps.Position = UDim2.new(0.010, 0, 0.21084006, 0)
-	Framefps.Size = UDim2.new(0, 193, 0, 44)
+	Framefps.Size = UDim2.new(0, 255, 255, 255)
 	
 	UICorner213.CornerRadius = UDim.new(0, 4)
 	UICorner213.Parent = Framefps
@@ -2335,7 +2335,7 @@ if IKAI then
 	Frametime.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 	Frametime.BorderSizePixel = 0
 	Frametime.Position = UDim2.new(0.010, 0, 0.11084006, 0)
-	Frametime.Size = UDim2.new(0, 293, 0, 44)
+	Frametime.Size = UDim2.new(0, 255, 255, 255)
 	
 	UICorner214.CornerRadius = UDim.new(0, 4)
 	UICorner214.Parent = Frametime
@@ -2529,7 +2529,7 @@ if IKAI then
 		UserInputService.InputBegan:Connect(function(input)
 			if input.KeyCode == Enum.KeyCode[yoo] then
 				if uihide == false then
-					ToggleFrameUi:TweenSize(UDim2.new(0, 198, 0, 48),"In","Quad",0.2,true)
+					ToggleFrameUi:TweenSize(UDim2.new(0, 255, 255, 255),"In","Quad",0.2,true)
 					game:GetService("TweenService"):Create(
 						ToggleFrameUi,
 						TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),

@@ -2,10 +2,6 @@ if not game:IsLoaded() then
     repeat game.Loaded:Wait()
     until game:IsLoaded() 
 end
-if not game:IsLoaded() then 
-    repeat game.Loaded:Wait()
-    until game:IsLoaded() 
-end
 repeat wait(1)
     pcall(function()
         if game:GetService("Players").LocalPlayer.PlayerGui.Main:FindFirstChild("ChooseTeam") then
@@ -24,7 +20,7 @@ repeat wait(1)
     end)
 until game.Players.localPlayer.Neutral == false
 if _G.Fast_Delay == nil then
-	_G.Fast_Delay = 0.1
+	_G.Fast_Delay = 0.3
 end
 spawn(function()
     while true do wait()
@@ -91,24 +87,24 @@ getgenv()['JsonDecode'] = function(msg)
     return game:GetService("HttpService"):JSONDecode(msg)
 end
 getgenv()['Check_Setting'] = function(Name)
-    if not _G.Dis and not isfolder('x2switz Hub BF Premium') then
-        makefolder('x2switz Hub BF Premium')
+    if not _G.Dis and not isfolder('Switch Hub BF Premium') then
+        makefolder('Switch Hub BF Premium')
     end
-    if not _G.Dis and not isfile('x2switz Hub BF Premium/'..Name..'.json') then
-        writefile('x2switz Hub BF Premium/'..Name..'.json',JsonEncode(_G.Setting_table))
+    if not _G.Dis and not isfile('Switch Hub BF Premium/'..Name..'.json') then
+        writefile('Switch Hub BF Premium/'..Name..'.json',JsonEncode(_G.Setting_table))
     end
 end
 getgenv()['Get_Setting'] = function(Name)
-    if not _G.Dis and isfolder('x2switz Hub BF Premium') and isfile('x2switz Hub BF Premium/'..Name..'.json') then
-        _G.Setting_table = JsonDecode(readfile('x2switz Hub BF Premium/'..Name..'.json'))
+    if not _G.Dis and isfolder('Switch Hub BF Premium') and isfile('Switch Hub BF Premium/'..Name..'.json') then
+        _G.Setting_table = JsonDecode(readfile('Switch Hub BF Premium/'..Name..'.json'))
         return _G.Setting_table
 	elseif not _G.Dis then
         Check_Setting(Name)
     end
 end
 getgenv()['Update_Setting'] = function(Name)
-    if not _G.Dis and isfolder('x2switz Hub BF Premium') and isfile('x2switz Hub BF Premium/'..Name..'.json') then
-        writefile('x2switz Hub BF Premium/'..Name..'.json',JsonEncode(_G.Setting_table))
+    if not _G.Dis and isfolder('Switch Hub BF Premium') and isfile('Switch Hub BF Premium/'..Name..'.json') then
+        writefile('Switch Hub BF Premium/'..Name..'.json',JsonEncode(_G.Setting_table))
 	elseif not _G.Dis then
         Check_Setting(Name)
     end
@@ -145,7 +141,7 @@ end
 
 function Text(value)
     game.StarterGui:SetCore("SendNotification", {
-        Title = "x2switz Notification", 
+        Title = "Switch Notification", 
         Text = tostring(value),
         Icon = "http://www.roblox.com/asset/?id=9606070311",
         Duration = 10
@@ -153,7 +149,7 @@ function Text(value)
 end
 function Com()
     game.StarterGui:SetCore("SendNotification", {
-        Title = "x2switz Notification", 
+        Title = "Switch Notification", 
         Text = "✅  Complete",
         Icon = "http://www.roblox.com/asset/?id=9606070311",
         Duration = 5
@@ -2301,6 +2297,8 @@ if IKAI then
 	local Frametime = Instance.new("Frame")
 	local UICorner213 = Instance.new("UICorner")
 	local UICorner214 = Instance.new("UICorner")
+	local TextLabelfps = Instance.new("TextLabel")
+	local TextLabeltime = Instance.new("TextLabel")
 	local ImageLabelfps = Instance.new("ImageLabel")
 	local ImageLabeltime = Instance.new("ImageLabel")
 	local Strokefps = Instance.new("UIStroke")
@@ -2350,11 +2348,50 @@ if IKAI then
 	Stroketime.Color = _G.Color
 	Stroketime.Transparency = 0
 	
-
+	TextLabelfps.Name = "TextLabelfps"
+	TextLabelfps.Parent = Framefps
+	TextLabelfps.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabelfps.BackgroundTransparency = 1.000
+	TextLabelfps.Position = UDim2.new(0.356857866, 0, 0.234848887, 0)
+	TextLabelfps.Size = UDim2.new(0, 124, 0, 23)
+	TextLabelfps.Font = Enum.Font.GothamSemibold
+	TextLabelfps.Text = "FPS:N/A"
+	TextLabelfps.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabelfps.TextSize = 14.000
+	TextLabelfps.TextXAlignment = Enum.TextXAlignment.Left
 	
-
+	TextLabeltime.Name = "TextLabeltime"
+	TextLabeltime.Parent = Frametime
+	TextLabeltime.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabeltime.BackgroundTransparency = 1.000
+	TextLabeltime.Position = UDim2.new(0.356857866, 0, 0.234848887, 0)
+	TextLabeltime.Size = UDim2.new(0, -35, 0, 23)
+	TextLabeltime.Font = Enum.Font.GothamSemibold
+	TextLabeltime.Text = "FPS:N/A"
+	TextLabeltime.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabeltime.TextSize = 14.000
+	TextLabeltime.TextXAlignment = Enum.TextXAlignment.Left
 	
-
+	spawn(function()
+		while wait() do
+			pcall(function()
+				local scripttime=game.Workspace.DistributedGameTime
+				local seconds = scripttime%60
+				local minutes = math.floor(scripttime/60%60)
+				local hours = math.floor(scripttime/3600)
+				local tempo = string.format("%.0f Hour , %.0f Minute , %.0f Second", hours ,minutes, seconds)
+				TextLabeltime.Text = tempo
+			end)
+		end
+	end)
+	
+	spawn(function()
+		while wait() do
+			pcall(function()
+				TextLabelfps.Text = "FPS:"..string.format("%d",workspace:GetRealPhysicsFPS())
+			end)
+		end
+	end)
 	
 	ImageLabelfps.Name = "ImageLabelfps"
 	ImageLabelfps.Parent = Framefps
@@ -2385,6 +2422,11 @@ if IKAI then
 			{Transparency = 1}
 		):Play()
 		TweenService:Create(
+			TextLabelfps,
+			TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
+			{TextTransparency = 1}
+		):Play()
+		TweenService:Create(
 			ImageLabelfps,
 			TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
 			{ImageTransparency = 1}
@@ -2401,7 +2443,11 @@ if IKAI then
 			TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
 			{Transparency = 0}
 		):Play()
-
+		TweenService:Create(
+			TextLabelfps,
+			TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
+			{TextTransparency = 0}
+		):Play()
 		TweenService:Create(
 			ImageLabelfps,
 			TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -2421,6 +2467,11 @@ if IKAI then
 			{Transparency = 1}
 		):Play()
 		TweenService:Create(
+			TextLabeltime,
+			TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
+			{TextTransparency = 1}
+		):Play()
+		TweenService:Create(
 			ImageLabeltime,
 			TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
 			{ImageTransparency = 1}
@@ -2437,7 +2488,11 @@ if IKAI then
 			TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
 			{Transparency = 0}
 		):Play()
-
+		TweenService:Create(
+			TextLabeltime,
+			TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
+			{TextTransparency = 0}
+		):Play()
 		TweenService:Create(
 			ImageLabeltime,
 			TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -2460,7 +2515,11 @@ if IKAI then
 			TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
 			{Transparency = 1}
 		):Play()
-
+		TweenService:Create(
+			TextLabelfps,
+			TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
+			{TextTransparency = 1}
+		):Play()
 		TweenService:Create(
 			ImageLabelfps,
 			TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -2486,6 +2545,11 @@ if IKAI then
 						Strokefps,
 						TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
 						{Transparency = 0}
+					):Play()
+					TweenService:Create(
+						TextLabelfps,
+						TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
+						{TextTransparency = 0}
 					):Play()
 					TweenService:Create(
 						ImageLabelfps,
@@ -2518,6 +2582,11 @@ if IKAI then
 						{Transparency = 1}
 					):Play()
 					TweenService:Create(
+						TextLabelfps,
+						TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
+						{TextTransparency = 1}
+					):Play()
+					TweenService:Create(
 						ImageLabelfps,
 						TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
 						{ImageTransparency = 1}
@@ -2543,7 +2612,11 @@ if IKAI then
 			TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
 			{Transparency = 1}
 		):Play()
-
+		TweenService:Create(
+			TextLabeltime,
+			TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
+			{TextTransparency = 1}
+		):Play()
 		TweenService:Create(
 			ImageLabeltime,
 			TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -2570,7 +2643,11 @@ if IKAI then
 						TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
 						{Transparency = 0}
 					):Play()
-
+					TweenService:Create(
+						TextLabeltime,
+						TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
+						{TextTransparency = 0}
+					):Play()
 					TweenService:Create(
 						ImageLabeltime,
 						TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -2600,6 +2677,11 @@ if IKAI then
 						Stroketime,
 						TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
 						{Transparency = 1}
+					):Play()
+					TweenService:Create(
+						TextLabeltime,
+						TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
+						{TextTransparency = 1}
 					):Play()
 					TweenService:Create(
 						ImageLabeltime,
@@ -3607,13 +3689,13 @@ if IKAI then
 end
 
 game.StarterGui:SetCore("SendNotification", {
-	Title = "x2switz Notification", 
+	Title = "Switch Notification", 
 	Text = "ฟังชั่นที่มีไอคอนนี้สามารถเปิด\nพร้อมฟามเวลได้",
 	Icon = "http://www.roblox.com/asset/?id=9610159123",
 	Duration = 8
 })
 
-local win = library:Window("x2switz",[[Hub]],[[Version : Premium ]],"9606070311",Enum.KeyCode.RightControl)
+local win = library:Window("Switch",[[Hub]],[[Version : Premium ]],"9606070311",Enum.KeyCode.RightControl)
 local General_Tab = win:Tab("General",[[7040391851]])
 local Quest_Tab = win:Tab("    Quest & Item",[[9606626859]])
 local PvP_Tab = win:Tab("PvP",[[9606626034]])
@@ -3693,14 +3775,14 @@ end)
         end
         if Auto_Farm_Bounty or Auto_Farm_Fruit and not Mix_Farm then
             local Fast = getupvalues(require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework))
-            local Lop = Fast[0]
+            local Lop = Fast[2]
             Lop.activeController.timeToNextAttack = (-math.huge^math.huge*math.huge)
             Lop.activeController.attacking = false
             Lop.activeController.timeToNextBlock = 0
             Lop.activeController.humanoid.AutoRotate = 80
             Lop.activeController.increment = 3
             Lop.activeController.blocking = false
-            Lop.activeController.hitboxMagnitude = 100
+            Lop.activeController.hitboxMagnitude = 80
         end
     end
 spawn(function()
@@ -3885,11 +3967,11 @@ General_Tab:Dropdown("FastAttack","Super Fast",MIo,function(vu)
 	_G.Setting_table.FastAttack_Mode = vu
 	Update_Setting(getgenv()['MyName'])
 	if _G.Setting_table.FastAttack_Mode == "Fast" then
-		_G.Fast_Delay = 0.155
-	elseif _G.Setting_table.FastAttack_Mode == "Smooth" then
 		_G.Fast_Delay = 0.145
+	elseif _G.Setting_table.FastAttack_Mode == "Smooth" then
+		_G.Fast_Delay = 0.387
 	elseif _G.Setting_table.FastAttack_Mode == "Super Fast" then
-		_G.Fast_Delay = 0.111
+		_G.Fast_Delay = 0.045
 	end
 end)
 local Camera = require(game.ReplicatedStorage.Util.CameraShaker)
@@ -5862,9 +5944,6 @@ end)
 General_Tab:Slider("Point",1,100,3,function(vu)
 	Points = vu
 end)
-General_Tab:Button("Copy Hwid",function()
-	setclipboard((syn and syn.request or request)({Url = 'https://api.luauth.xyz/hwid', Method = syn and "Get" or "GET"}).Body)
-end)
 spawn(function()
     while wait(.5) do
         if Melee_A then
@@ -6239,7 +6318,7 @@ spawn(function()
 		end)
 	end
 end)
-Quest_Tab:Toggle("Auto Phoenix Awaken (bug)","9606294253",_G.Setting_table.Auto_Phoenix_Awaken,function(vu)
+Quest_Tab:Toggle("Auto Phoenix Awaken (Bug)","9606294253",_G.Setting_table.Auto_Phoenix_Awaken,function(vu)
 	Auto_Phoenix_Awaken = vu
 	Auto_Farm_Fruit = vu
 	SkillZ = vu
@@ -9627,7 +9706,7 @@ end)
 			end 
 		end)
 	end
-PvP_Tab:Label("Bounty (Bug)")
+PvP_Tab:Label("Bounty")
 	PvP_Tab:Toggle("Aattack","9606294253",false,function(vu)
 		Attack = vu
 	end)
@@ -9704,7 +9783,7 @@ PvP_Tab:Label("Bounty (Bug)")
 			game:GetService("Players").LocalPlayer.Character[SelectToolWeaponGun].RemoteFunctionShoot:InvokeServer(game:GetService("Players"):FindFirstChild(SelectedKillPlayer).Character.HumanoidRootPart.Position, (require(game.ReplicatedStorage.Util).Other.hrpFromPart(v17)));
 		end
 	end)
-PvP_Tab:Toggle("Auto Farm Bounty (bug)","9606294253",_G.Setting_table.Auto_Farm_Bounty,function(vu)
+PvP_Tab:Toggle("Auto Farm Bounty (Bug)","9606294253",_G.Setting_table.Auto_Farm_Bounty,function(vu)
 	Auto_Farm_Bounty = vu
 	_G.Setting_table.Auto_Farm_Bounty = vu
 	Update_Setting(getgenv()['MyName'])
@@ -10862,54 +10941,52 @@ elseif New_World then
     end)
 
 elseif Three_World  then
-    Island_Tab:Button("Port Town", function()
-        TP2(CFrame.new(-275.21615600586, 43.755737304688, 5451.0659179688))
+    Island_Tab:Button("port Town", function()
+        TP2(CFrame.new(-339.97287, 28.7907715, 5383.02832))
     end)
 
-    Island_Tab:Button("Hydra Island", function()
-        TP2(CFrame.new(5541.2685546875, 668.30456542969, 195.48069763184))
+    Island_Tab:Button("Haydar Island", function()
+        TP2(CFrame.new(5294.52637, 602.030457, 362.93338))
     end)
     
-    Island_Tab:Button("Gaint Tree", function()
-        TP2(CFrame.new(2276.0859375, 25.87850189209, -6493.03125))
+    Island_Tab:Button("Green Tree", function()
+        TP2(CFrame.new(2271.48462, 25.2306652, -6406.27002))
     end)
     
-    Island_Tab:Button("Zou Island", function()
-        TP2(CFrame.new(-10034.40234375, 331.78845214844, -8319.6923828125))
+    Island_Tab:Button("NPC Green Tree", function()
+        TP2(CFrame.new(2925.28735, 2279.76611, -7197.43018))
     end)
     
-    Island_Tab:Button("PineApple Village", function()
-        TP2(CFrame.new(-11172.950195313, 331.8049621582, -10151.033203125))
+    Island_Tab:Button("Room Yama", function()
+        TP2(CFrame.new(5227.0376, 5.17536545, 1131.05957))
     end)
     
     Island_Tab:Button("Mansion", function()
-        TP2(CFrame.new(-12548.998046875, 332.40396118164, -7603.1865234375))
+        TP2(CFrame.new(-12550.5654, 337.194061, -7490.75098))
     end)
 
-    Island_Tab:Button("Castle on the Sea", function()
-        TP2(CFrame.new(-5498.0458984375, 313.79473876953, -2860.6022949219))
+    Island_Tab:Button("Sea island", function()
+        TP2(CFrame.new(-5050.30078, 313.893555, -2994.84033))
+    end)
+    
+    Island_Tab:Button("Bone island",function()
+        TP2(CFrame.new(-9516.2373, 142.130615, 5549.93262))
+    end)
+    
+    Island_Tab:Button("Room Raid", function()
+        TP2(CFrame.new(-5014.5835, 314.196075, -2817.87085))
     end)
 
-    Island_Tab:Button("Graveyard Island", function()
-        TP2(CFrame.new(-9515.07324, 142.130615, 5537.58398))
+    Island_Tab:Button("NPC Bone", function()
+        TP2(CFrame.new(-8726.99512, 141.699554, 6247.3501))
     end)
-    Island_Tab:Button("Haunted Castle",function()
-        TP2(CFrame.new(-8932.86, 143.258, 6063.31))
+    Island_Tab:Button("ice cream island",function()
+        TP2(CFrame.new(-906.191406, 58.3237, -10884.4951))
     end)
-    Island_Tab:Button("Raid Lab", function()
-        TP2(CFrame.new(-5057.146484375, 314.54132080078, -2934.7995605469))
-    end)
-
-    Island_Tab:Button("Mini Sky", function()
-        TP2(CFrame.new(-263.66668701172, 49325.49609375, -35260))
-    end)
-    Island_Tab:Button("Ice Cream Island",function()
-        TP2(CFrame.new(-691.829, 371.943, -11106.4))
-    end)
-    Island_Tab:Button("Soa of Cake",function()
+    Island_Tab:Button("Soa of Cake island",function()
         TP2(CFrame.new(-2073.262451171875, 37.16134262084961, -10183.3271484375))
     end)
-    Island_Tab:Button("Cake Loaf",function()
+    Island_Tab:Button("Cake Island",function()
         TP2(CFrame.new(-2099.33, 66.9971, -12128.6))
     end)
 end

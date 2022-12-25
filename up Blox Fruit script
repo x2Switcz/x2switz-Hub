@@ -20,7 +20,7 @@ repeat wait(1)
     end)
 until game.Players.localPlayer.Neutral == false
 if _G.Fast_Delay == nil then
-	_G.Fast_Delay = 0.3
+	_G.Fast_Delay = 0
 end
 spawn(function()
     while true do wait()
@@ -3775,7 +3775,7 @@ end)
         end
         if Auto_Farm_Bounty or Auto_Farm_Fruit and not Mix_Farm then
             local Fast = getupvalues(require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework))
-            local Lop = Fast[2]
+            local Lop = Fast[0]
             Lop.activeController.timeToNextAttack = (-math.huge^math.huge*math.huge)
             Lop.activeController.attacking = false
             Lop.activeController.timeToNextBlock = 0
@@ -3969,9 +3969,9 @@ General_Tab:Dropdown("FastAttack","Super Fast",MIo,function(vu)
 	if _G.Setting_table.FastAttack_Mode == "Fast" then
 		_G.Fast_Delay = 0.155
 	elseif _G.Setting_table.FastAttack_Mode == "Smooth" then
-		_G.Fast_Delay = 0.3
+		_G.Fast_Delay = 0.145
 	elseif _G.Setting_table.FastAttack_Mode == "Super Fast" then
-		_G.Fast_Delay = 0.147
+		_G.Fast_Delay = 0.111
 	end
 end)
 local Camera = require(game.ReplicatedStorage.Util.CameraShaker)

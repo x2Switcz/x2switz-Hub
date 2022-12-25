@@ -2,25 +2,27 @@ if not game:IsLoaded() then
     repeat game.Loaded:Wait()
     until game:IsLoaded() 
 end
-repeat wait(1)
-    pcall(function()
-        if game:GetService("Players").LocalPlayer.PlayerGui.Main:FindFirstChild("ChooseTeam") then
-            if game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Visible == true then
-                if _G.Team == "Marines" then
-                    for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton.MouseButton1Click)) do
-                        v.Function()
-                    end
-                else
-                    for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.MouseButton1Click)) do
-                        v.Function()
-                    end
+if game:GetService("Players").LocalPlayer.PlayerGui.Main:FindFirstChild("ChooseTeam") then
+    repeat wait()
+        if game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Main").ChooseTeam.Visible == true then
+            if _G.Team == "Marine" then
+                for i, v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Activated)) do                                                                                                
+                    v.Function()
+                end
+            elseif _G.Team == "Marine" then
+                for i, v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton.Activated)) do                                                                                                
+                    v.Function()
+                end
+            else
+                for i, v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Activated)) do                                                                                                
+                    v.Function()
                 end
             end
         end
-    end)
-until game.Players.localPlayer.Neutral == false
+    until game.Players.LocalPlayer.Team ~= nil and game:IsLoaded()
+end
 if _G.Fast_Delay == nil then
-	_G.Fast_Delay = 0.3
+	_G.Fast_Delay = 0
 end
 spawn(function()
     while true do wait()
@@ -42,7 +44,7 @@ game:service'Players'.LocalPlayer.Idled:connect(function()
 end)
 
 spawn(function()
-	while wait(3) do
+	while wait(2) do
 		game:GetService'VirtualUser':CaptureController()
 	end
 end)
@@ -87,24 +89,24 @@ getgenv()['JsonDecode'] = function(msg)
     return game:GetService("HttpService"):JSONDecode(msg)
 end
 getgenv()['Check_Setting'] = function(Name)
-    if not _G.Dis and not isfolder('Switch Hub BF Premium') then
-        makefolder('Switch Hub BF Premium')
+    if not _G.Dis and not isfolder('x2switz Hub BF Premium') then
+        makefolder('x2switz Hub BF Premium')
     end
-    if not _G.Dis and not isfile('Switch Hub BF Premium/'..Name..'.json') then
-        writefile('Switch Hub BF Premium/'..Name..'.json',JsonEncode(_G.Setting_table))
+    if not _G.Dis and not isfile('x2switz Hub BF Premium/'..Name..'.json') then
+        writefile('x2switz Hub BF Premium/'..Name..'.json',JsonEncode(_G.Setting_table))
     end
 end
 getgenv()['Get_Setting'] = function(Name)
-    if not _G.Dis and isfolder('Switch Hub BF Premium') and isfile('Switch Hub BF Premium/'..Name..'.json') then
-        _G.Setting_table = JsonDecode(readfile('Switch Hub BF Premium/'..Name..'.json'))
+    if not _G.Dis and isfolder('x2switz Hub BF Premium') and isfile('x2switz Hub BF Premium/'..Name..'.json') then
+        _G.Setting_table = JsonDecode(readfile('x2switz Hub BF Premium/'..Name..'.json'))
         return _G.Setting_table
 	elseif not _G.Dis then
         Check_Setting(Name)
     end
 end
 getgenv()['Update_Setting'] = function(Name)
-    if not _G.Dis and isfolder('Switch Hub BF Premium') and isfile('Switch Hub BF Premium/'..Name..'.json') then
-        writefile('Switch Hub BF Premium/'..Name..'.json',JsonEncode(_G.Setting_table))
+    if not _G.Dis and isfolder('x2switz Hub BF Premium') and isfile('x2switz Hub BF Premium/'..Name..'.json') then
+        writefile('x2switz Hub BF Premium/'..Name..'.json',JsonEncode(_G.Setting_table))
 	elseif not _G.Dis then
         Check_Setting(Name)
     end
@@ -141,7 +143,7 @@ end
 
 function Text(value)
     game.StarterGui:SetCore("SendNotification", {
-        Title = "Switch Notification", 
+        Title = "x2switz Notification", 
         Text = tostring(value),
         Icon = "http://www.roblox.com/asset/?id=9606070311",
         Duration = 10
@@ -149,7 +151,7 @@ function Text(value)
 end
 function Com()
     game.StarterGui:SetCore("SendNotification", {
-        Title = "Switch Notification", 
+        Title = "x2switz Notification", 
         Text = "✅  Complete",
         Icon = "http://www.roblox.com/asset/?id=9606070311",
         Duration = 5
@@ -3689,13 +3691,13 @@ if IKAI then
 end
 
 game.StarterGui:SetCore("SendNotification", {
-	Title = "Switch Notification", 
+	Title = "x2switz Notification", 
 	Text = "ฟังชั่นที่มีไอคอนนี้สามารถเปิด\nพร้อมฟามเวลได้",
 	Icon = "http://www.roblox.com/asset/?id=9610159123",
 	Duration = 8
 })
 
-local win = library:Window("Switch",[[Hub]],[[Version : Premium ]],"9606070311",Enum.KeyCode.RightControl)
+local win = library:Window("x2switz",[[Hub]],[[4.0]],"9606070311",Enum.KeyCode.RightControl)
 local General_Tab = win:Tab("General",[[7040391851]])
 local Quest_Tab = win:Tab("    Quest & Item",[[9606626859]])
 local PvP_Tab = win:Tab("PvP",[[9606626034]])
@@ -3941,7 +3943,7 @@ spawn(function()
 end)
 	
 if _G.Setting_table.FastAttack_Mode == nil then
-	_G.Setting_table.FastAttack_Mode = "Fast"
+	_G.Setting_table.FastAttack_Mode = "Super Fast"
 end
 MIo = {
 	"Super Fast",
@@ -3971,7 +3973,7 @@ General_Tab:Dropdown("FastAttack","Super Fast",MIo,function(vu)
 	elseif _G.Setting_table.FastAttack_Mode == "Smooth" then
 		_G.Fast_Delay = 0.387
 	elseif _G.Setting_table.FastAttack_Mode == "Super Fast" then
-		_G.Fast_Delay = 0.045
+		_G.Fast_Delay = 0.124
 	end
 end)
 local Camera = require(game.ReplicatedStorage.Util.CameraShaker)

@@ -3782,7 +3782,7 @@ end)
             Lop.activeController.humanoid.AutoRotate = 80
             Lop.activeController.increment = 3
             Lop.activeController.blocking = false
-            Lop.activeController.hitboxMagnitude = 80
+            Lop.activeController.hitboxMagnitude = 100
         end
     end
 spawn(function()
@@ -9709,7 +9709,7 @@ end)
 			end 
 		end)
 	end
-PvP_Tab:Label("Bounty")
+PvP_Tab:Label("Bounty (Bug)")
 	PvP_Tab:Toggle("Aattack","9606294253",false,function(vu)
 		Attack = vu
 	end)
@@ -9786,7 +9786,7 @@ PvP_Tab:Label("Bounty")
 			game:GetService("Players").LocalPlayer.Character[SelectToolWeaponGun].RemoteFunctionShoot:InvokeServer(game:GetService("Players"):FindFirstChild(SelectedKillPlayer).Character.HumanoidRootPart.Position, (require(game.ReplicatedStorage.Util).Other.hrpFromPart(v17)));
 		end
 	end)
-PvP_Tab:Toggle("Auto Farm Bounty","9606294253",_G.Setting_table.Auto_Farm_Bounty,function(vu)
+PvP_Tab:Toggle("Auto Farm Bounty (bug)","9606294253",_G.Setting_table.Auto_Farm_Bounty,function(vu)
 	Auto_Farm_Bounty = vu
 	_G.Setting_table.Auto_Farm_Bounty = vu
 	Update_Setting(getgenv()['MyName'])

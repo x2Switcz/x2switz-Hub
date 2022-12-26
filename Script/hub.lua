@@ -483,7 +483,7 @@ function CheckQuestBoss()
 				elseif Lv == 15 or Lv <= 29 or SelectMonster == "Gorilla [Lv. 20]" then -- Gorilla
 					Ms = "Gorilla [Lv. 20]"
 					NameQuest = "JungleQuest"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Gorilla"
 					CFrameQ = CFrame.new(-1601.6553955078, 36.85213470459, 153.38809204102)
 					CFrameMon = CFrame.new(-1142.6488037109, 40.462348937988, -515.39227294922)
@@ -497,7 +497,7 @@ function CheckQuestBoss()
 				elseif Lv == 40 or Lv <= 59 or SelectMonster == "Brute [Lv. 45]" then -- Brute
 					Ms = "Brute [Lv. 45]"
 					NameQuest = "BuggyQuest1"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Brute"
 					CFrameQ = CFrame.new(-1140.1761474609, 4.752049446106, 3827.4057617188)
 					CFrameMon = CFrame.new(-1387.5324707031, 24.592035293579, 4100.9575195313)
@@ -511,7 +511,7 @@ function CheckQuestBoss()
 				elseif Lv == 75 or Lv <= 89 or SelectMonster == "Desert Officer [Lv. 70]" then -- Desert Officer
 					Ms = "Desert Officer [Lv. 70]"
 					NameQuest = "DesertQuest"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Desert Officer"
 					CFrameQ = CFrame.new(896.51721191406, 6.4384617805481, 4390.1494140625)
 					CFrameMon = CFrame.new(1547.1510009766, 14.452038764954, 4381.8002929688)
@@ -525,7 +525,7 @@ function CheckQuestBoss()
 				elseif Lv == 100 or Lv <= 119 or SelectMonster == "Snowman [Lv. 100]" then -- Snowman
 					Ms = "Snowman [Lv. 100]"
 					NameQuest = "SnowQuest"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Snowman"
 					CFrameQ = CFrame.new(1386.8073730469, 87.272789001465, -1298.3576660156)
 					CFrameMon = CFrame.new(1218.7956542969, 138.01184082031, -1488.0262451172)
@@ -546,7 +546,7 @@ function CheckQuestBoss()
 				elseif Lv == 175 or Lv <= 249 or SelectMonster == "Dark Master [Lv. 175]" then -- Dark Master
 					Ms = "Dark Master [Lv. 175]"
 					NameQuest = "SkyQuest"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Dark Master"
 					CFrameQ = CFrame.new(-4842.1372070313, 717.69543457031, -2623.0483398438)
 					CFrameMon = CFrame.new(-5148.1650390625, 439.04571533203, -2332.9611816406)
@@ -560,7 +560,7 @@ function CheckQuestBoss()
 				elseif Lv == 275 or Lv <= 299 or SelectMonster == "Gladiator [Lv. 275]" then -- Gladiator
 					Ms = "Gladiator [Lv. 275]"
 					NameQuest = "ColosseumQuest"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Gladiator"
 					CFrameQ = CFrame.new(-1577.7890625, 7.4151420593262, -2984.4838867188)
 					CFrameMon = CFrame.new(-1521.3740234375, 81.203170776367, -3066.3139648438)
@@ -574,7 +574,7 @@ function CheckQuestBoss()
 				elseif Lv == 330 or Lv <= 374 or SelectMonster == "Military Spy [Lv. 325]" then -- Military Spy
 					Ms = "Military Spy [Lv. 325]"
 					NameQuest = "MagmaQuest"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Military Spy"
 					CFrameQ = CFrame.new(-5316.1157226563, 12.262831687927, 8517.00390625)
 					CFrameMon = CFrame.new(-5984.0532226563, 82.14656829834, 8753.326171875)
@@ -593,7 +593,7 @@ function CheckQuestBoss()
 					_G.FM = true
 					Ms = "Fishman Commando [Lv. 400]"
 					NameQuest = "FishmanQuest"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Fishman Commando"
 					CFrameQ = CFrame.new(61122.65234375, 18.497442245483, 1569.3997802734)
 					CFrameMon = CFrame.new(61738.3984375, 64.207321166992, 1433.8375244141)
@@ -615,7 +615,7 @@ function CheckQuestBoss()
 					_G.FM = false
 					Ms = "Shanda [Lv. 475]"
 					NameQuest = "SkyExp1Quest"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Shanda"
 					CFrameQ = CFrame.new(-7863.1596679688, 5545.5190429688, -378.42266845703)
 					CFrameMon = CFrame.new(-7685.1474609375, 5601.0751953125, -441.38876342773)
@@ -632,7 +632,7 @@ function CheckQuestBoss()
 				elseif Lv == 550 or Lv <= 624 or SelectMonster == "Royal Soldier [Lv. 550]" then -- Royal Soldier
 					Ms = "Royal Soldier [Lv. 550]"
 					NameQuest = "SkyExp2Quest"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Royal Soldier"
 					CFrameQ = CFrame.new(-7903.3828125, 5635.9897460938, -1410.923828125)
 					CFrameMon = CFrame.new(-7760.4106445313, 5679.9077148438, -1884.8112792969)
@@ -646,7 +646,7 @@ function CheckQuestBoss()
 				elseif Lv >= 650 or SelectMonster == "Galley Captain [Lv. 650]" then -- Galley Captain
 					Ms = "Galley Captain [Lv. 650]"
 					NameQuest = "FountainQuest"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Galley Captain"
 					CFrameQ = CFrame.new(5258.2788085938, 38.526931762695, 4050.044921875)
 					CFrameMon = CFrame.new(5677.6772460938, 92.786109924316, 4966.6323242188)
@@ -663,7 +663,7 @@ function CheckQuestBoss()
 				elseif Lv == 725 or Lv <= 774 or SelectMonster == "Mercenary [Lv. 725]" then -- Mercenary
 					Ms = "Mercenary [Lv. 725]"
 					NameQuest = "Area1Quest"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Mercenary"
 					CFrameQ = CFrame.new(-427.72567749023, 72.99634552002, 1835.9426269531)
 					CFrameMon = CFrame.new(-864.85009765625, 122.47104644775, 1453.1505126953)
@@ -677,7 +677,7 @@ function CheckQuestBoss()
 				elseif Lv == 800 or Lv <= 874 or SelectMonster == "Factory Staff [Lv. 800]" then -- Factory Staff
 					Ms = "Factory Staff [Lv. 800]"
 					NameQuest = "Area2Quest"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Factory Staff"
 					CFrameQ = CFrame.new(635.61151123047, 73.096351623535, 917.81298828125)
 					CFrameMon = CFrame.new(533.22045898438, 128.46876525879, 355.62615966797)
@@ -691,7 +691,7 @@ function CheckQuestBoss()
 				elseif Lv == 900 or Lv <= 949 or SelectMonster == "Marine Captain [Lv. 900]" then -- Marine Captain
 					Ms = "Marine Captain [Lv. 900]"
 					NameQuest = "MarineQuest3"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Marine Captain"
 					CFrameQ = CFrame.new(-2440.9934082031, 73.04190826416, -3217.7082519531)
 					CFrameMon = CFrame.new(-2335.2026367188, 79.786659240723, -3245.8674316406)
@@ -708,7 +708,7 @@ function CheckQuestBoss()
 				elseif Lv == 975 or Lv <= 999 or SelectMonster == "Vampire [Lv. 975]" then -- Vampire
 					Ms = "Vampire [Lv. 975]"
 					NameQuest = "ZombieQuest"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Vampire"
 					CFrameQ = CFrame.new(-5494.3413085938, 48.505931854248, -794.59094238281)
 					CFrameMon = CFrame.new(-5806.1098632813, 16.722528457642, -1164.4384765625)
@@ -722,7 +722,7 @@ function CheckQuestBoss()
 				elseif Lv == 1050 or Lv <= 1099 or SelectMonster == "Winter Warrior [Lv. 1050]" then -- Winter Warrior
 					Ms = "Winter Warrior [Lv. 1050]"
 					NameQuest = "SnowMountainQuest"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Winter Warrior"
 					CFrameQ = CFrame.new(607.05963134766, 401.44781494141, -5370.5546875)
 					CFrameMon = CFrame.new(1234.4449462891, 456.95419311523, -5174.130859375)
@@ -736,7 +736,7 @@ function CheckQuestBoss()
 				elseif Lv == 1125 or Lv <= 1174 or SelectMonster == "Horned Warrior [Lv. 1125]" then -- Horned Warrior
 					Ms = "Horned Warrior [Lv. 1125]"
 					NameQuest = "IceSideQuest"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Horned Warrior"
 					CFrameQ = CFrame.new(-6061.841796875, 15.926671981812, -4902.0385742188)
 					CFrameMon = CFrame.new(-6292.751953125, 91.181983947754, -5502.6499023438)
@@ -750,7 +750,7 @@ function CheckQuestBoss()
 				elseif Lv == 1200 or Lv <= 1249 or SelectMonster == "Lava Pirate [Lv. 1200]" then -- Lava Pirate
 					Ms = "Lava Pirate [Lv. 1200]"
 					NameQuest = "FireSideQuest"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Lava Pirate"
 					CFrameQ = CFrame.new(-5429.0473632813, 15.977565765381, -5297.9614257813)
 					CFrameMon = CFrame.new(-5251.1889648438, 55.164535522461, -4774.4096679688)
@@ -767,7 +767,7 @@ function CheckQuestBoss()
 				elseif Lv == 1275 or Lv <= 1299 or SelectMonster == "Ship Engineer [Lv. 1275]" then -- Ship Engineer
 					Ms = "Ship Engineer [Lv. 1275]"
 					NameQuest = "ShipQuest1"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Ship Engineer"
 					CFrameQ = CFrame.new(1040.2927246094, 125.08293151855, 32911.0390625)
 					CFrameMon = CFrame.new(886.28179931641, 40.47790145874, 32800.83203125)
@@ -787,7 +787,7 @@ function CheckQuestBoss()
 				elseif Lv == 1325 or Lv <= 1349 or SelectMonster == "Ship Officer [Lv. 1325]" then -- Ship Officer
 					Ms = "Ship Officer [Lv. 1325]"
 					NameQuest = "ShipQuest2"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Ship Officer"
 					CFrameQ = CFrame.new(971.42065429688, 125.08293151855, 33245.54296875)
 					CFrameMon = CFrame.new(955.38458251953, 181.08335876465, 33331.890625)
@@ -807,7 +807,7 @@ function CheckQuestBoss()
 				elseif Lv == 1375 or Lv <= 1424 or SelectMonster == "Snow Lurker [Lv. 1375]" then -- Snow Lurker
 					Ms = "Snow Lurker [Lv. 1375]"
 					NameQuest = "FrostQuest"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Snow Lurker"
 					CFrameQ = CFrame.new(5668.1372070313, 28.202531814575, -6484.6005859375)
 					CFrameMon = CFrame.new(5628.482421875, 57.574996948242, -6618.3481445313)
@@ -821,7 +821,7 @@ function CheckQuestBoss()
 				elseif Lv >= 1450 or SelectMonster == "Water Fighter [Lv. 1450]" then -- Water Fighter
 					Ms = "Water Fighter [Lv. 1450]"
 					NameQuest = "ForgottenQuest"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Water Fighter"
 					CFrameQ = CFrame.new(-3054.5827636719, 236.87213134766, -10147.790039063)
 					CFrameMon = CFrame.new(-3262.9301757813, 298.69036865234, -10552.529296875)
@@ -838,7 +838,7 @@ function CheckQuestBoss()
 				elseif Lv == 1525 or Lv <= 1574 or SelectMonster == "Pistol Billionaire [Lv. 1525]" then -- Pistol Billoonaire
 					Ms = "Pistol Billionaire [Lv. 1525]"
 					NameQuest = "PiratePortQuest"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Pistol Billionaire"
 					CFrameQ = CFrame.new(-289.61752319336, 43.819011688232, 5580.0903320313)
 					CFrameMon = CFrame.new(-236.53652954102, 217.46676635742, 6006.0883789063)
@@ -852,7 +852,7 @@ function CheckQuestBoss()
 				elseif Lv == 1600 or Lv <= 1624 or SelectMonster == "Dragon Crew Archer [Lv. 1600]" then -- Dragon Crew Archer
 					Ms = "Dragon Crew Archer [Lv. 1600]"
 					NameQuest = "AmazonQuest"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Dragon Crew Archer"
 					CFrameQ = CFrame.new(5833.1147460938, 51.60498046875, -1103.0693359375)
 					CFrameMon = CFrame.new(6831.1171875, 441.76708984375, 446.58615112305)
@@ -866,7 +866,7 @@ function CheckQuestBoss()
 				elseif Lv == 1650 or Lv <= 1699 or SelectMonster == "Giant Islander [Lv. 1650]" then -- Giant Islander
 					Ms = "Giant Islander [Lv. 1650]"
 					NameQuest = "AmazonQuest2"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Giant Islander"
 					CFrameQ = CFrame.new(5446.8793945313, 601.62945556641, 749.45672607422)
 					CFrameMon = CFrame.new(5009.5068359375, 664.11071777344, -40.960144042969)
@@ -880,7 +880,7 @@ function CheckQuestBoss()
 				elseif Lv == 1725 or Lv <= 1774 or SelectMonster == "Marine Rear Admiral [Lv. 1725]" then -- Marine Rear Admiral
 					Ms = "Marine Rear Admiral [Lv. 1725]"
 					NameQuest = "MarineTreeIsland"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Marine Rear Admiral"
 					CFrameQ = CFrame.new(2179.98828125, 28.731239318848, -6740.0551757813)
 					CFrameMon = CFrame.new(3294.3142089844, 385.41125488281, -7048.6342773438)
@@ -894,7 +894,7 @@ function CheckQuestBoss()
 				elseif Lv == 1800 or Lv <= 1824 or SelectMonster == "Fishman Captain [Lv. 1800]" then -- Fishman Captain
 					Ms = "Fishman Captain [Lv. 1800]"
 					NameQuest = "DeepForestIsland3"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Fishman Captain"
 					CFrameQ = CFrame.new(-10583.099609375, 331.78845214844, -8759.4638671875)
 					CFrameMon = CFrame.new(-10789.401367188, 427.18637084961, -9131.4423828125)
@@ -908,7 +908,7 @@ function CheckQuestBoss()
 				elseif Lv == 1850 or Lv <= 1899 or SelectMonster == "Mythological Pirate [Lv. 1850]" then -- Mythological Pirate
 					Ms = "Mythological Pirate [Lv. 1850]"
 					NameQuest = "DeepForestIsland"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Mythological Pirate"
 					CFrameQ = CFrame.new(-13232.662109375, 332.40396118164, -7626.4819335938)
 					CFrameMon = CFrame.new(-13508.616210938, 582.46228027344, -6985.3037109375)
@@ -922,21 +922,21 @@ function CheckQuestBoss()
 				elseif Lv >= 1925 and Lv <= 1974 or SelectMonster == "Musketeer Pirate [Lv. 1925]" then -- Musketeer Pirate
 					Ms = "Musketeer Pirate [Lv. 1925]"
 					NameQuest = "DeepForestIsland2"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Musketeer Pirate"
 					CFrameQ = CFrame.new(-12682.096679688, 390.88653564453, -9902.1240234375)
 					CFrameMon = CFrame.new(-13291.5078125, 520.47338867188, -9904.638671875)
 				elseif Lv >= 1975 and Lv <= 1999 or SelectMonster == "Reborn Skeleton [Lv. 1975]" then -- Reborn Skeleton
 					Ms = "Musketeer Pirate [Lv. 1925]"
 					NameQuest = "DeepForestIsland2"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Musketeer Pirate"
 					CFrameQ = CFrame.new(-12682.096679688, 390.88653564453, -9902.1240234375)
 					CFrameMon = CFrame.new(-13291.5078125, 520.47338867188, -9904.638671875)
 				elseif Lv >= 2000 and Lv <= 2024 or SelectMonster == "Living Zombie [Lv. 2000]" then -- Living Zombie
 					Ms = "Living Zombie [Lv. 2000]"
 					NameQuest = "HauntedQuest1"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Living Zombie"
 					CFrameQ = CFrame.new(-9480.80762, 142.130661, 5566.37305)
 					CFrameMon = CFrame.new(-10103.7529, 238.565979, 6179.75977)
@@ -950,7 +950,7 @@ function CheckQuestBoss()
 				elseif Lv >= 2050 and Lv <= 2074 or SelectMonster == "Posessed Mummy [Lv. 2050]" then -- Posessed Mummy
 					Ms = "Posessed Mummy [Lv. 2050]"
 					NameQuest = "HauntedQuest2"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Posessed Mummys"
 					CFrameQ = CFrame.new(-9515.39551, 172.266037, 6078.89746)
 					CFrameMon = CFrame.new(-9554.11035, 65.6141663, 6041.73584)
@@ -964,7 +964,7 @@ function CheckQuestBoss()
 				elseif Lv >= 2100 and Lv <= 2124 or SelectMonster == "Peanut President [Lv. 2100]" then -- Peanut President
 					Ms = "Peanut President [Lv. 2100]"
 					NameQuest = "PeanutQuest2"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Peanut Presidents"
 					CFrameQ = CFrame.new(-2104.453125, 38.129974365234, -10194.0078125)
 					CFrameMon = CFrame.new(-2067.33203125, 90.557350158691, -10552.051757812)
@@ -978,24 +978,31 @@ function CheckQuestBoss()
 				elseif Lv >= 2150 and Lv <= 2200 or SelectMonster == "Ice Cream Commander [Lv. 2150]" then -- Ice Cream Commander
 					Ms = "Ice Cream Commander [Lv. 2150]"
 					NameQuest = "IceCreamIslandQuest"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Ice Cream Commanders"
 					CFrameQ = CFrame.new(-821.35913085938, 65.845329284668, -10965.2578125)
 					CFrameMon = CFrame.new(-697.65338134766, 174.48368835449, -11218.38671875)
-				elseif Lv >= 2200 and Lv <= 2250 or SelectMonster == "Ice Cream Commander [Lv. 2150]" then -- Ice Cream Commander
+				elseif Lv >= 2200 and Lv <= 2224 or SelectMonster == "Ice Cream Commander [Lv. 2150]" then -- Ice Cream Commander
 					Ms = "Cookie Crafter [Lv. 2200]"
 					NameQuest = "CakeQuest1"
 					QuestLv = 1
 					NameMon = "Cookie Crafters"
 					CFrameQ = CFrame.new(-2017.4874267578125, 36.85276412963867, -12027.53515625)
 					CFrameMon = CFrame.new(-2358.5791015625, 36.85615539550781, -12111.052734375)
-				elseif Lv >= 2225 or SelectMonster == "Cake Guard [Lv. 2225]" then
+				elseif Lv >= 2225 and Lv <= 2249 or SelectMonster == "Cake Guard [Lv. 2225]" then -- Cake Guard
 					Ms = "Cake Guard [Lv. 2225]"
 					NameQuest = "CakeQuest1"
-					QuestLv = 2
+					QuestLv = 1
 					NameMon = "Cake Guards"
 					CFrameMon = CFrame.new(-1430.4925537109375, 36.85621643066406, -12322.162109375)
 					CFrameQ = CFrame.new(-2017.4874267578125, 36.85276412963867, -12027.53515625)
+				elseif Lv >= 2250 or SelectMonster == "Baking Staff [Lv. 2250]" then -- Baking Staff
+					Ms = "Baking Staff [Lv. 2250]"
+					NameQuest = "CakeQuest2"
+					QuestLv = 1
+					NameMon = "Baking Staff"
+					CFrameQ = CFrame.new(-1928.31763, 37.7296638, -12840.626)
+					CFrameMon = CFrame.new(-1818.347900390625, 93.41275787353516, -12887.66015625)
 				end
 			end
 		end
@@ -1739,13 +1746,14 @@ function CheckQuestBoss()
 					CFrameMon = CFrame.new(-1817.9747314453125, 209.5632781982422, -12288.9228515625)
 					SelectMonster = "Cookie Crafter [Lv. 2200]"
 					TelePBoss(CFrameQ)
-				elseif Lv >= 2250 or SelectMonster == "Baking Staff [Lv. 2250]" then 
+				elseif Lv >= 2250  or SelectMonster == "Baking Staff [Lv. 2250]" then 
 					Ms = "Baking Staff [Lv. 2250]"
 					NameQuest = "CakeQuest2"
 					QuestLv = 1
 					NameMon = "Baking Staff"
 					CFrameQ = CFrame.new(-1928.31763, 37.7296638, -12840.626)
 					CFrameMon = CFrame.new(-1818.347900390625, 93.41275787353516, -12887.66015625)
+					SelectMonster = "Head Baker [Lv. 2275]"
 					TelePBoss(CFrameQ)
 				end
 			end
@@ -3697,7 +3705,7 @@ game.StarterGui:SetCore("SendNotification", {
 	Duration = 8
 })
 
-local win = library:Window("x2switz",[[Hub]],[[4.0]],"9606070311",Enum.KeyCode.RightControl)
+local win = library:Window("x2switz",[[2.0]],[[2.0]],"9606070311",Enum.KeyCode.RightControl)
 local General_Tab = win:Tab("General",[[7040391851]])
 local Quest_Tab = win:Tab("    Quest & Item",[[9606626859]])
 local PvP_Tab = win:Tab("PvP",[[9606626034]])
@@ -3943,19 +3951,18 @@ spawn(function()
 end)
 	
 if _G.Setting_table.FastAttack_Mode == nil then
-	_G.Setting_table.FastAttack_Mode = "Super Fast"
+	_G.Setting_table.FastAttack_Mode = "Extreme"
 end
 MIo = {
-	"Super Fast",
-	"Fast",
-	"Smooth"
+	"Extreme",
+	"Normal"
 }
 General_Tab:Toggle("Fast Attack ","9606294253",_G.Setting_table.FastAttack,function(vu)
 	_G.Setting_table.FastAttack = vu
 	Update_Setting(getgenv()['MyName'])
 end)
 spawn(function()
-	while wait(.5) do
+	while wait(.2) do
 		pcall(function()
 			if _G.Setting_table.FastAttack then
 				repeat wait(_G.Fast_Delay)
@@ -3965,15 +3972,13 @@ spawn(function()
 		end)
 	end
 end)
-General_Tab:Dropdown("FastAttack","Super Fast",MIo,function(vu)
+General_Tab:Dropdown("FastAttack","Extreme",MIo,function(vu)
 	_G.Setting_table.FastAttack_Mode = vu
 	Update_Setting(getgenv()['MyName'])
-	if _G.Setting_table.FastAttack_Mode == "Fast" then
-		_G.Fast_Delay = 0.145
-	elseif _G.Setting_table.FastAttack_Mode == "Smooth" then
-		_G.Fast_Delay = 0.387
-	elseif _G.Setting_table.FastAttack_Mode == "Super Fast" then
-		_G.Fast_Delay = 0.124
+	if _G.Setting_table.FastAttack_Mode == "Normal" then
+		_G.Fast_Delay = 0.175
+	elseif _G.Setting_table.FastAttack_Mode == "Extreme" then
+		_G.Fast_Delay = 0.0000000
 	end
 end)
 local Camera = require(game.ReplicatedStorage.Util.CameraShaker)
@@ -4434,15 +4439,15 @@ General_Tab:Toggle("Auto Farm Fruit","9606294253",_G.Setting_table.Farm_Fruit,fu
 	Update_Setting(getgenv()['MyName'])
 end)
 if _G.Setting_table.MinHealth == nil then
-	_G.Setting_table.MinHealth = 20
+	_G.Setting_table.MinHealth = 40
 end
-General_Tab:Slider("Health %",1,30,_G.Setting_table.MinHealth,function(vu)
+General_Tab:Slider("Health %",1,100,_G.Setting_table.MinHealth,function(vu)
 	MinHealth = vu
 	_G.Setting_table.MinHealth = vu
 	Update_Setting(getgenv()['MyName'])
 end)
 spawn(function()
-	while wait(.5) do
+	while wait(.2) do
 		pcall(function()
 			if Auto_Farm_Fruit then
 				if not Mix_Farm then
@@ -9521,9 +9526,9 @@ function activatefly()
 			end
 				pos.position=new.p
 			if keys.w then
-				gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(-math.rad(speed*15),0,0)
+				gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(-math.rad(speed*20),0,0)
 			elseif keys.s then
-				gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(math.rad(speed*15),0,0)
+				gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(math.rad(speed*20),0,0)
 			else
 				gyro.cframe = workspace.CurrentCamera.CoordinateFrame
 			end
@@ -10959,8 +10964,8 @@ elseif Three_World  then
         TP2(CFrame.new(2925.28735, 2279.76611, -7197.43018))
     end)
     
-    Island_Tab:Button("Room Yama", function()
-        TP2(CFrame.new(5227.0376, 5.17536545, 1131.05957))
+    Island_Tab:Button("Sea of Treats", function()
+        TP2(CFrame.new(515.025391, 23.2379875, -12443.0342))
     end)
     
     Island_Tab:Button("Mansion", function()
@@ -10979,8 +10984,8 @@ elseif Three_World  then
         TP2(CFrame.new(-5014.5835, 314.196075, -2817.87085))
     end)
 
-    Island_Tab:Button("NPC Bone", function()
-        TP2(CFrame.new(-8726.99512, 141.699554, 6247.3501))
+    Island_Tab:Button("Candy Cane", function()
+        TP2(CFrame.new(-1078.1731, 16.6404343, -14473.0742))
     end)
     Island_Tab:Button("ice cream island",function()
         TP2(CFrame.new(-906.191406, 58.3237, -10884.4951))
@@ -10990,6 +10995,9 @@ elseif Three_World  then
     end)
     Island_Tab:Button("Cake Island",function()
         TP2(CFrame.new(-2099.33, 66.9971, -12128.6))
+    end)
+    Island_Tab:Button("Room Yama",function()
+        TP2(CFrame.new(5226.40088, 5.17536545, 1116.08484))
     end)
 end
 
